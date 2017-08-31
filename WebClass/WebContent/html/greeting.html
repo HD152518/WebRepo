@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>greeting.html</title>
+		<script>
+			function greeting(nation) {
+				console.log("greeting start");
+				
+				if(nation=='k')
+					document.getElementById("result").innerHTML=
+						"안녕하세요";
+				else if(nation=='a')
+					document.getElementById("result").innerHTML=
+						"Hello";
+				else if(nation=='c')
+					document.getElementById("result").innerHTML=
+						"니 하오";
+				
+				console.log("greeting end");
+				console.log(document.getElementById("result"));
+			}
+		</script>
+	</head>
+	<body>
+		각 나라의 인사말<br><br>
+		<form>
+			<input type="button"  value="한국" onclick="greeting('k');">
+			<input type="button"  value="미국" onclick="greeting('a');">
+			<input type="button"  value="중국" onclick="greeting('c');">
+		</form>
+		<p id="result"></p>
+	</body>
+</html>

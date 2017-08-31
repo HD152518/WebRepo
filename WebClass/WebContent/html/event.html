@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>event.html</title>
+		<style>
+			.bgYellow {backgronud-color:yellow}
+			.bgBlue {backgronud-color:blue}
+			.bgWhite {backgronud-color:white}
+			.border {border:3px solid red}
+		</style>
+		<script>
+			function changeColor(color) {
+				var c = document.getElementById("container");
+				c.setAttribute("class", color);
+			}
+			function toUpperCase(word) {
+				word.value = word.value.toUpperCase();
+			}
+			function addBorder(box) {
+				box.setAttribute("class"," border);
+			}
+			function removeBorder(box) {
+				box.removeAttribute("class");
+			}
+		</script>
+	</head>
+	<body onload="alert('웹 페이지 로딩됨');">
+		<div id="container">
+			<input type="radio" name="color" onclick="changeColor('bgYellow');">노란색
+			<input type="radio" name="color" onclick="changeColor('bgBlue);">파란색
+			<input type="radio" name="color" onclick="changeColor('bgWhite');">원래대로
+			<br>
+			<input type="text" id="word" onchange="toUpperCase(this);">
+			<div id="box" onmouseover="addBorder(this);" onmouseout="removeBorder(this);">
+				마우스를 위에 올려보세요
+			</div>
+		</div>
+	</body>
+</html>
