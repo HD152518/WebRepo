@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>MyBlog - My Interests</title>
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+      <link rel="stylesheet" href="../css/myblog.css">
+      <link rel="stylesheet" href="../css/myinterests.css">
+      <script type="text/javascript" src="../js/myblog.js"></script>
+   </head>
+   <body>
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <a class="navbar-brand" href="index.html">My Blog</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item" onmouseover="menu_over(this);" onmouseout="menu_out(this);">
+                  <a class="nav-link" href="aboutme.html">About Me<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item" onmouseover="menu_over(this);" onmouseout="menu_out(this);">
+                  <a class="nav-link" href="mygoals.html">My Goals</a>
+               </li>
+               <li class="nav-item" onmouseover="menu_over(this);" onmouseout="menu_out(this);">
+                  <a class="nav-link" href="myinterests.html">My Interests</a>
+               </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" id="loginForm">
+               <input class="form-control mr-sm-2" type="text" placeholder="ID" size="10" aria-label="ID" id="id" required>
+               <input class="form-control mr-sm-2" type="password" placeholder="PWD"  size="10" aria-label="PWD" id="pwd" required>
+               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+            </form>
+         </div>
+      </nav>
+
+      <div class="container" >
+        <h1>흥미</h1>
+        <hr>
+         <div class="boxLeft" id="initialBox">
+           <img alt="피아노" class="boxImageLeft" src='https://cdn.pixabay.com/photo/2012/04/13/00/39/piano-31357_960_720.png'>
+         	<h2>피아노</h2>
+          <p>
+            중1때 이후로 접었다가 1학기 초에 다시 시작하게 되었다.<br>
+            게임은 한 판 할때마다 시간 지나가는게 보이는데 피아노는 건반이랑 악보만 보니까<br>
+            2~3시간이 순식간에 삭제된다.<br>
+            칠수 있는 곡은 all of me, 흑건, 피아노를 위하여, clair de lune, <br>
+            아라베스크 등이다. <br>
+            요즘은 쉬운 곡들 위주로 칠 수 있는 곡을 늘리고 있다.<br>
+          </p>
+        </div>
+         <div class="boxRight">
+           <img alt="오버워치" class = "boxImageRight" src='http://assets1.ignimgs.com/2016/05/24/overwatch1280jpg-6daa73_1280w.jpg'>
+           <h2 style="display:inline-block;">게임</h2>
+           <p>
+             성적 하락의 주범이다.<br>
+             1학년 때는 시간과 장소를 가리지 않고 했는데 2학년 초에 질려서 그나마 다행이다.<br>
+             시험끝나고 게임하다가 노트북을 뺏긴 이후에는 폰으로만 하고 있다.<br>
+             그런데 배틀그라운드라는 갓겜이 나와서 내신이 다시 위험하다.
+           </p>
+         </div>
+         <div class="boxLeft">
+           <img alt="코딩" class = "boxImageLeft" style="height:210px;" src='http://burning-glass.com/wp-content/uploads/coding_screen_400x300-400x284.jpg'>
+           <h2>코딩</h2>
+           <p>
+             게임과 함께 성적 하락의 주범이다.<br>
+             (그러나 응용 프로그래밍 성적은 올라간다!)<br>
+             옛날에는 cocos2d-x로 간단한 2d게임을 만들다가, #implude 동아리에<br>
+             들어가고 나서는 안드로이드 앱개발로 갈아탔다. 이제 팀프로젝트 중이다.<br>
+             인공신경망 구축도 재밌어서 발만 살짝 들여놓고 있다.<br>
+             알고리즘 공부 하나도 안하고 nypc 나갔다가 2번이나 떨어져서 후회중이다.<br>
+             이제는 파이썬+장고를 배우려고 한다.
+           </p>
+         </div>
+      </div>
+
+      <footer>
+        <p>© 2017 SEO KANG MIN ALL RIGHTS RESERVED</p>
+      </footer>
+
+      <div class="modal" id="myModal">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title">로그인 결과</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <p></p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+      <script src="../js/login.js"></script>
+   </body>
+</html>

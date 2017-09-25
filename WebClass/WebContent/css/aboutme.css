@@ -1,0 +1,25 @@
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+html, body, h1, h2, h3, h4, h5, h6, li, p {font-family:'Noto Sans KR';}
+
+.container {
+   margin-top: 56.4px;
+}
+
+body {
+  min-height:-webkit-fill-available;
+}
+
+div.box {
+  border-radius: 25px;
+  padding:50px;
+  margin:0 auto;
+  margin-top: 45px;
+  max-width: 800px;
+  width:100%;
+  color:#FFFFFF;
+  background:rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  text-shadow: 2px 2px 5px black;
+}

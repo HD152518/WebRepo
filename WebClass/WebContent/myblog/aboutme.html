@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>My Blog - About Me</title>
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+      <link rel="stylesheet" href="../css/myblog.css">
+      <link rel="stylesheet" href="../css/aboutme.css">
+      <script type="text/javascript" src="../js/myblog.js"></script>
+   </head>
+   <body>
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <a class="navbar-brand" href="index.html">My Blog</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item" onmouseover="menu_over(this);" onmouseout="menu_out(this);">
+                  <a class="nav-link" href="aboutme.html">About Me<span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item" onmouseover="menu_over(this);" onmouseout="menu_out(this);">
+                  <a class="nav-link" href="mygoals.html">My Goals</a>
+               </li>
+               <li class="nav-item" onmouseover="menu_over(this);" onmouseout="menu_out(this);">
+                  <a class="nav-link" href="myinterests.html">My Interests</a>
+               </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" id="loginForm">
+               <input class="form-control mr-sm-2" type="text" placeholder="ID" size="10" aria-label="ID" id="id" required>
+               <input class="form-control mr-sm-2" type="password" placeholder="PWD"  size="10" aria-label="PWD" id="pwd" required>
+               <button class="btn btn-outline-success my-2 my-sm-0 blue" type="submit">Login</button>
+            </form>
+         </div>
+      </nav>
+      <div class="container">
+        <h1>프로필</h1>
+        <hr>
+
+        <div class="box">
+           <h2>신상</h2>
+           <ul>
+           	<li>이름 : 서강민</li>
+           	<li>나이 : 18세</li>
+           	<li>학력 : 한국디지털미디어고등학교 2학년</li>
+           </ul>
+        </div>
+
+        <div class="box">
+          <h2 style="padding-bottom:30px;">좋아하는 영화</h2>
+            <div id="carouselExampleIndicators" style="width:100%;" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100 carouselImage" src="https://wallpaperscraft.com/image/interstellar_matthew_mcconaughey_anne_hathaway_97811_1920x1080.jpg"
+                  alt="인터스텔라">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>인터스텔라</h3>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 carouselImage" src="http://eskipaper.com/images/the-shawshank-redemption-6.jpg"
+                  alt="쇼생크 탈출">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>쇼생크 탈출</h3>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 carouselImage" src="https://framasphere.org/camo/7f12ade60b07a1b5dd975b1c8ffb6d96427b37e2/68747470733a2f2f692e7974696d672e636f6d2f76692f4d2d56546473434b4c67672f6d617872657364656661756c742e6a7067"
+                  alt="스타워즈 : 깨어난 포스">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>스타워즈 : 깨어난 포스</h3>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 carouselImage" src="https://images8.alphacoders.com/457/457955.jpg"
+                  alt="다크 나이트">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>다크 나이트</h3>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 carouselImage" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F5bfb7cf5-c52e-46c7-92db-df68dc1063c2.png"
+                  alt="12인의 성난 사람들">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>12인의 성난 사람들</h3>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>© 2017 SEO KANG MIN ALL RIGHTS RESERVED</p>
+      </footer>
+
+      <div class="modal" id="myModal">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title">로그인 결과</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <p></p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+      <script src="../js/login.js"></script>
+   </body>
+</html>
