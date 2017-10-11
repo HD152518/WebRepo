@@ -1,22 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<!-- 1. Directive tag(������) -->
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>숫자 합 계산</title>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
 </head>
 <body>
-<form>
-<input type="number" name="num" required>
-<button type="submit">계산</button>
-</form>
-<%-- 스크립틀릿 tag로 1~입력받은 숫자까지의 합 구하기 --%>
-<%-- 결과 출력 시 변수 값은 표현식 tag로 작성하기 (jsp 파일 로딩시에는 보이지 않음) --%>
-<%! int num;%>
-<%
-  num=
-%>
-<h1>1 ~ <%=num%>까지의 합은 <%=num%>입니다. </h1>
+	<%--2. comment tag(jsp �ּ�) --%>
+	<%--3. Declaration tag --%>
+	
+	<%--4. Scriptlet tag (�ڹ� �״�� �ۼ�) --%>
+	<%! private static final String DEFAULT_NAME = "Guest"; %>
+	
+	<%
+		//�ڹ��ڵ带 �״�� �ۼ�
+		String name = request.getParameter("name");
+		if(name == null) name = DEFAULT_NAME;
+	%>
+	
+	<%--5. Expression tag(ǥ����) --%>
+	<h1>Hello, <%=name %></h1>
+	
+	
 </body>
 </html>

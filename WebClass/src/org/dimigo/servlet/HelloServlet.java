@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class HelloServlet
  */
-@WebServlet(description = "ì²«ë²ˆì§¸ ì„œë¸”ë¦¿", urlPatterns = { "/hello" })
+@WebServlet("/Hello")
 public class HelloServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -27,70 +27,70 @@ public class HelloServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//ì…ë ¥ë°ì´í„° ì²˜ë¦¬
+		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		// ÀÔ·Â µ¥ÀÌÅÍ Ã³¸®
+		request.setCharacterEncoding("utf-8");
+		
+		
 		String id = request.getParameter("id");
 		String name = request.getParameter("name");
-		System.out.printf("id : %s, name : %s\n", id, name);
+		System.out.printf("id: %s, name: %s", id, name);
 		
-		// ì¶œë ¥ë°ì´í„° Content Type ì„¤ì •
-		response.setContentType("text/html; charset=utf-8;");
-		PrintWriter out = response.getWriter();
+		
+		
+		
+		
+		// Ãâ·Â µ¥ÀÌÅÍ contentÅ¸ÀÔ ¼³Á¤
+		response.setContentType("text/html;charset=utf-8");
+		PrintWriter out = response.getWriter();		
 		
 		out.println("<!DOCTYPE html>");
 		out.println("<html>");
 		out.println("<head>");
-		out.println("<title>Servlet Test</title>");
+		out.println("<title>Servlet Text</title>");
 		out.println("</head>");
-		out.println("<body>");
-		out.println("<h1>Hello, Servlet</h1>");
-		out.println("<h1>ì•ˆë…•, ì„œë¸”ë¦¿</h1>");
-		out.println("<h2>id : "+id+", name : "+name+"</h2>");
+		out.println("<boby>");
+		out.println("<h1>¾È³ç, ¼­ºí¸´</h1>");
+		out.println("<h2>id: " + id + ", name: " +name + "</h2>");
 		out.println("</body>");
 		out.println("</html>");
+		
+		
+		out.close();
+		
+		
+		
+		
+		
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		request.setCharacterEncoding("utf-8");
-		
-		String id = request.getParameter("id");
-		String name = request.getParameter("name");
-		System.out.printf("id : %s, name : %s\n", id, name);
-		
-		// ì¶œë ¥ë°ì´í„° Content Type ì„¤ì •
-		response.setContentType("text/html; charset=utf-8;");
-		PrintWriter out = response.getWriter();
-		
-		out.println("<!DOCTYPE html>");
-		out.println("<html>");
-		out.println("<head>");
-		out.println("<title>Servlet Test</title>");
-		out.println("</head>");
-		out.println("<body>");
-		out.println("<h1>Hello, Servlet</h1>");
-		out.println("<h1>ì•ˆë…•, ì„œë¸”ë¦¿</h1>");
-		out.println("<h2>id : "+id+", name : "+name+"</h2>");
-		out.println("</body>");
-		out.println("</html>");
+		// TODO Auto-generated method stub
+		System.out.println("doPostÈ£ÃâµÊ");
+		doGet(request, response);
 	}
 	
-	@Override
 	public void init() throws ServletException {
 		System.out.println("init()");
 	}
 	
 	@Override
 	protected void service(HttpServletRequest arg0, HttpServletResponse arg1) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		System.out.println("service()");
 		super.service(arg0, arg1);
 	}
 	
 	@Override
 	public void destroy() {
+		// TODO Auto-generated method stub
 		System.out.println("destroy()");
+		super.destroy();
 	}
 
 }
